@@ -7,7 +7,7 @@ import profile3 from '../../Assets/profile-images/Ellipse -8.png';
 import profile4 from '../../Assets/profile-images/Ellipse -7.png';
 import deleteIcon from "../../Assets/icons/delete-black-18dp.svg";
 import editIcon from "../../Assets/icons/create-black-18dp.svg";
-//import viewIcon from "../../Assets/icons/download.jpg";
+import viewIcon from "../../Assets/icons/view.png";
 
 const PayrollForm = () => {
 
@@ -24,15 +24,26 @@ const PayrollForm = () => {
         const result = await axios.get("http://localhost:3001/users");
         setUser(result.data);
     }
+    const viewUserData= async (id) => {
+      await axios.viewUser(`http://localhost:3001/users/4/${id}`);
+      loadUsers();
+  }
     const deleteUserData= async (id) => {
       await axios.delete(`http://localhost:3001/users/${id}`);
       loadUsers();
   }
 
     return (
+      <body className="payroll">
         <div className="container" >
             <div className="py-4">
-                <h1>Employee payroll List</h1>
+              <div className="header-content header">
+              <h4 className="empp" al>EMPLOYEE PAYROLL LIST</h4>
+              <div><Link className="btn" to="/users/add">Add User</Link>
+              </div>
+              </div><br /><br />
+            
+                
                 <table class="table border shadow">
           <thead class="thead-dark">
     <tr>
@@ -75,13 +86,12 @@ const PayrollForm = () => {
                   </div>
                 ))}</td>
                 <td>{user.salary}</td>
-                <td>{user.startdate}</td>
+                <td>{user.day+'-'+user.month+'-'+user.year}</td>
                 <td>
-                  <Link class="btn btn-primary mr-2" to={`/users/${user.id}`}>
-                    View
+                  <Link to={`/users/${user.id}`}>
+                  <img  src={viewIcon}  alt="eye" class="imageeye" />
                   </Link>
-                  
-                  <img src={deleteIcon} alt="delete" onClick={() => deleteUserData(user.id)}/>
+                 <img src={deleteIcon} alt="delete" onClick={() => deleteUserData(user.id)}/>
                   <Link to={`/users/edit/${user.id}`}>
                   <img  src={editIcon} alt="edit"  />
                   </Link>
@@ -92,7 +102,8 @@ const PayrollForm = () => {
           </tbody>
         </table>
       </div>
-    </div>
+    </div> <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    </body>
   );
 };
 export default PayrollForm;

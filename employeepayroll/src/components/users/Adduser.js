@@ -49,14 +49,13 @@ const AddUser = () => {
   };
 
   const onSubmit = async event => {
-      console.log(user);
     event.preventDefault();
     await axios.post("http://localhost:3001/users", user);
     history.push("/");
   };
   const changeValue = (event) => {
     setUser({ ...user, [event.target.name]: event.target.value })
-    console.log(event.target.value)
+   
 }
 
 const onCheckChange = (name) => {
@@ -78,14 +77,21 @@ const getChecked = (name) => {
             <div className="logo-content">
                 <img src={logo} alt="" />
                 <div>
-                    <span className="emp-text">EMPLOYEE</span> <br />
-                    <span className="emp-text emp-payroll">PAYROLL</span>
+                
+                   <div className="logoo">
+                 <Link to="/" className="resetButton button cancelButton">EMPLOYEE PAYROLL</Link>
+                 </div>
+                    
                 </div>
+            
             </div>
         </header>
+        
         <div className="form-content">
             <form className="form-head" action="#" onSubmit={onSubmit}>
-                <div className="form-head">Employee Payroll form</div>
+                
+                <div className="form-head">EMPLOYEE PAYROLL FORM</div>
+
                 <div className="row-content">
                     <label className="label text" htmlFor="name">Name</label>
                     <input className="input" type="text" id="name" name="name" value={user.name} onChange={changeValue} placeholder="Your name.." />

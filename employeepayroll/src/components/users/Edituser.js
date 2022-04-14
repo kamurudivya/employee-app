@@ -85,9 +85,13 @@ const AddUser = () => {
             <div className="logo-content">
                 <img src={logo} alt="" />
                 <div>
-                    <span className="emp-text">EMPLOYEE</span> <br />
-                    <span className="emp-text emp-payroll">PAYROLL</span>
+                
+                   <div className="logoo">
+                 <Link to="/" className="resetButton button cancelButton">EMPLOYEE PAYROLL</Link>
+                 </div>
+                    
                 </div>
+            
             </div>
         </header>
         <div className="form-content">
@@ -228,7 +232,7 @@ const AddUser = () => {
                     
                     <div className="submit-reset">
                     
-                        <button type="submit" className="button submitButton" id="submitButton">{user.isUpdate ? 'Update' : 'Submit'} Update User</button>
+                        <button type="submit" className="button submitButton" id="submitButton">{user.isUpdate ? 'Update' : ''} Update</button>
                                           </div>
                 </div >
             </form >

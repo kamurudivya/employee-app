@@ -10,8 +10,9 @@ body {
 .payroll-main{
     height: 100%;
     min-height: calc(100% - 80px);
-    background-color: #f7f7f7;
-  
+    background-color: #ffffff;
+
+    background: #77c593;
     justify-content: center;
     align-items: center;
     padding: 0;
@@ -20,15 +21,16 @@ body {
 
 .header {
     padding: 15px 0;
-    background-color: #ffffff;
+    background-color: #12a4d9;
 }
 
 .header-content {
     display: flex;
+    background-color: #ffffff;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border: 1px solid green;
+    border: 1px solid black;
 }
 
 .logo-content {
@@ -58,11 +60,11 @@ body {
 
 .form-content {
     min-height: calc(100% - 80px);
-    background-color: #f7f7f7;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 0px solid green;
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .form {
@@ -78,7 +80,7 @@ body {
 .form-head {
     font: normal normal bold 28px/37px Roboto;
     letter-spacing: 0px;
-    color: #42515F;
+    color: #010101;
     text-transform: capitalize;
     opacity: 1;
     padding-bottom: 20px;
@@ -89,7 +91,7 @@ body {
     flex-direction: row;
     margin-bottom: 10px;
     align-items: center;
-    border: 0px solid green;
+    border: 1px solid rgb(0, 0, 0);
 }
 
 .label {
@@ -226,7 +228,7 @@ select {
 }
 
 a.button:hover {
-    background: grey;
+    background: #ed3572;
     color: white;
 }
 
@@ -242,4 +244,54 @@ a.button:hover {
 
 .department {
     margin-left: 30px;
+}
+.list-group{
+    text-align:center;
+    display: inline-block;
+}
+.imageeye{
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+
+}
+.collapse navbar-collapse{
+    background-color: white;
+}
+.btn {
+    display: inline-block;
+    margin-left: 50em;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1045d4;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    background-color: #ffffff;
+    border: 1px solid black;
+    padding: 0.500rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.50rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.views{
+    background-color:#ffffff ;
+   
+    text-align: center;
+}
+.payroll{
+    background: #ffffff;
+}
+.empp{
+    color: #1045d4;
+}
+.done{
+    margin-left: 0em;
+    background-color: #ed3572;
+}
+.headings{
+    background-color: #ed3572; 
 }

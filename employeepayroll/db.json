@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "name": "divya",
+      "name": "Divya",
       "profileArray": [
         {
           "url": "../../Assets/profile-images/Ellipse -3.png"
@@ -27,12 +27,12 @@
         "Engineer"
       ],
       "gender": "female",
-      "salary": "37000",
-      "day": "11",
-      "month": "Apr",
-      "year": "2021",
+      "salary": "588888",
+      "day": "16",
+      "month": "Feb",
+      "year": "2020",
       "startDate": "",
-      "notes": "hiyuiir766",
+      "notes": "fewafserdgte",
       "id": 1,
       "profilePic": "../../Assets/profile-images/Ellipse -1.png",
       "isUpdate": false,
